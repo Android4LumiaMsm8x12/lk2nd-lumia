@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /* Copyright (c) 2023 Nikita Travkin <nikita@trvn.ru> */
+/* Copyright (c) 2025 Vicente Cortés <vicenteicc2008@gmail.com> */
 
 #include <compiler.h>
 #include <config.h>
@@ -140,11 +141,11 @@ static struct {
 	void (*action)(void);
 } menu_options[] = {
 	{ "  Reboot  ", GREEN,  opt_reboot },
-	{ " Continue ", WHITE,  opt_continue },
-	{ " Recovery ", ORANGE, opt_recovery },
-	{ "Bootloader", ORANGE, opt_bootloader },
+	{ " Continue to Android/Linux ", WHITE,  opt_continue },
+	{ " Recovery Mode ", ORANGE, opt_recovery },
+	{ "Bootloader Mode", ORANGE, opt_bootloader },
 	{ "    EDL   ", RED,    opt_edl },
-	{ " Shutdown ", RED,    opt_shutdown },
+	{ " Power Off ", RED,    opt_shutdown },
 };
 
 #define fbcon_printf_ln(color, y, incr, x...) \
@@ -198,8 +199,16 @@ void display_fastboot_menu(void)
 		fbcon_puts_ln(RED, y, incr, true, "Unknown (FIXME!)");
 	y += incr;
 
-	fbcon_puts_ln(RED, y, incr, true, "Fastboot mode");
+	/* Caja sólida tipo "Tile" */
+	fbcon_puts_ln(RED,  y, incr, true, "============================");
 	y += incr;
+
+	fbcon_puts_ln(WHITE, y, incr, true, "     Lumia 435/530 lk2nd      ");
+	y += incr;
+
+	fbcon_puts_ln(RED,  y, incr, true, "============================");
+	y += incr;
+
 
 	/* Skip lines for the menu */
 	y_menu = y;
