@@ -141,7 +141,7 @@ static struct {
 	void (*action)(void);
 } menu_options[] = {
 	{ "  Reboot  ", GREEN,  opt_reboot },
-	{ " Continue to Android/Linux ", WHITE,  opt_continue },
+	{ " Continue to Android/Linux ", GREEN,  opt_continue },
 	{ " Recovery Mode ", ORANGE, opt_recovery },
 	{ "Bootloader Mode", ORANGE, opt_bootloader },
 	{ "    EDL   ", RED,    opt_edl },
