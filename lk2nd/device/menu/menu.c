@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: BSD-3-Clause
 /* Copyright (c) 2023 Nikita Travkin <nikita@trvn.ru> */
-/* Copyright (c) 2025 viZPilot */
+/* Copyright (c) 2025-2026 viZPilot */
 
 #include <compiler.h>
 #include <config.h>
