@@ -12,10 +12,10 @@
 	These nodes are listed in no particular order. */
 	nokia-rock {
     		model = "Nokia Lumia 530";
-		compatible = "nokia,rock", "qcom,msm8610", "lk2nd,device";
+				compatible = "nokia,rock", "qcom,msm8610", "lk2nd,device";
 
 	    	lk2nd,smd-rpm-hack-opening;
-		lk2nd,relocate-fb = <0x0FF00000>;
+			lk2nd,relocate-fb = <0x0FF00000>;
 	};
 	
 	nokia-vela {
@@ -24,5 +24,13 @@
 
 		    lk2nd,smd-rpm-hack-opening;
 		    lk2nd,relocate-fb = <0x0FF00000>;
+	};
+
+	nokia-chakra {
+    		model = "Microsoft Lumia 535";
+				compatible = "nokia,chakra", "qcom,msm8610", "lk2nd,device";
+
+	    	lk2nd,smd-rpm-hack-opening;
+			lk2nd,relocate-fb = <0x0FF00000>;
 	};
 };
